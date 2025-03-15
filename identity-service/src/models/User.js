@@ -35,3 +35,16 @@ userSchema.pre('save',async function(next){
         }
     }
 })
+
+userSchema.methods.comparePassword=async function(candidatePassword){
+    try {
+        return await argon2.verify(this.password,candidatePassword)
+    } catch (error) {
+        throw error
+    }
+}
+
+userSchema.index({userSchema:'text'});
+
+const User = mongoose.model('User',userSchema)
+module.exports = User
