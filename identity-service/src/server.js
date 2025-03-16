@@ -6,8 +6,13 @@ const helmet = require('helmet')
 const cors = require('cors')
 const {RateLimiterRedis} = require('rate-limiter-flexible')
 const Redis = require('ioredis')
+const {rateLimit} = require('express-rate-limit')
+const {RedisStore} = require('rate-limit-redis')
+const routes = require('./routes/identity-service')
+const errorHandler = require('./middleware/errorHandler')
 
 const app = express()
+const PORT = process.env.PORT || 3001
 
 connectDB()
 
@@ -37,6 +42,43 @@ app.use((req,res,next)=>{
         logger.warn(`Rate limit exceeded for IP: ${req.ip}`);
         res.status(429).json({success:false,message:"Too many requests"})
      })
+ })
+
+ // Ip based rate limiting for sensitive endpoints
+
+ const sensitiveEndpointsLimiter = rateLimit({
+    windowMs : 15*60*1000,
+    max : 50,
+    standardHeaders : true,
+    legacyHeaders:false,
+    handler:(req,res)=>{
+        logger.warn(`Sensitive endpoint rate limit exceeded for IP: ${req.ip}`);
+        res.status(429).json({success:false,message:'Too many requests'})
+    },
+    store:new RedisStore({
+        sendCommand:(...args)=> redisClient.call(...args)
+    }),
+ });
+
+ // apply this sensitiveEndPointLimiter to our routes
+
+ app.use('/api/auth/register',sensitiveEndpointsLimiter)
+
+ // routes
+
+ app.use('/api/auth',routes)
+
+ // error handler
+ app.use(errorHandler)
+
+ app.listen(PORT,()=>{
+    logger.info(`Identity service running on port ${PORT}`)
+ });
+
+ // unhandler promise rejection
+
+ process.on('unhandledRejection',(reason,promise)=>{
+    logger.error("Unhandled Rejection at", promise,"reason:",reason)
  })
 
 

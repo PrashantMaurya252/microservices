@@ -9,4 +9,4 @@ const connectDB = () => {
 };
 
 
-mondule.exports = connectDB
+module.exports = connectDB
