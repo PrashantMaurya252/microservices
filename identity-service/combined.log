@@ -18,3 +18,13 @@
 {"level":"info","message":"Request body [object Object] ","service":"identity-service","timestamp":"2025-03-16T11:11:25.015Z"}
 {"level":"info","message":"Registration endpoint hit...","service":"identity-service","timestamp":"2025-03-16T11:11:25.018Z"}
 {"level":"warn","message":"User already exist","service":"identity-service","timestamp":"2025-03-16T11:11:25.054Z"}
+{"level":"info","message":"Identity service running on port 3001","service":"identity-service","timestamp":"2025-03-16T14:03:02.943Z"}
+{"level":"info","message":"Connected to mongoDB","service":"identity-service","timestamp":"2025-03-16T14:03:03.628Z"}
+{"level":"info","message":"Received POST request to /api/auth/register","service":"identity-service","timestamp":"2025-03-16T14:03:10.871Z"}
+{"level":"info","message":"Request body [object Object] ","service":"identity-service","timestamp":"2025-03-16T14:03:10.874Z"}
+{"level":"info","message":"Registration endpoint hit...","service":"identity-service","timestamp":"2025-03-16T14:03:10.899Z"}
+{"buffer":{"data":[103,214,218,31,104,36,12,103,5,179,80,151],"type":"Buffer"},"level":"warn","message":"User saved successfully","service":"identity-service","timestamp":"2025-03-16T14:03:11.021Z"}
+{"level":"info","message":"Received POST request to /api/auth/register","service":"identity-service","timestamp":"2025-03-16T14:04:19.016Z"}
+{"level":"info","message":"Request body [object Object] ","service":"identity-service","timestamp":"2025-03-16T14:04:19.017Z"}
+{"level":"info","message":"Registration endpoint hit...","service":"identity-service","timestamp":"2025-03-16T14:04:19.021Z"}
+{"level":"warn","message":"User already exist","service":"identity-service","timestamp":"2025-03-16T14:04:19.052Z"}
