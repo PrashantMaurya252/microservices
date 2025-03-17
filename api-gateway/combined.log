@@ -22,3 +22,6 @@
 {"level":"info","message":"Received POST request to /v1/auth/login","service":"api-gateway","timestamp":"2025-03-16T14:29:54.374Z"}
 {"level":"info","message":"Request body [object Object] ","service":"api-gateway","timestamp":"2025-03-16T14:29:54.377Z"}
 {"level":"info","message":"Response received from identity service: 200","service":"api-gateway","timestamp":"2025-03-16T14:29:54.630Z"}
+{"level":"info","message":"API Gateway is running on port 3000","service":"api-gateway","timestamp":"2025-03-17T15:57:16.309Z"}
+{"level":"info","message":"Identity service is running on port: http://localhost:3001","service":"api-gateway","timestamp":"2025-03-17T15:57:16.315Z"}
+{"level":"info","message":"Redis service is running on port: redis://localhost:6379","service":"api-gateway","timestamp":"2025-03-17T15:57:16.316Z"}
