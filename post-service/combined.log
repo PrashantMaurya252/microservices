@@ -1,2 +1,57 @@
 {"level":"info","message":"Identity service running on port 3002","service":"post-service","timestamp":"2025-03-18T17:03:43.687Z"}
 {"level":"info","message":"Connected to mongoDB","service":"post-service","timestamp":"2025-03-18T17:03:44.465Z"}
+{"level":"info","message":"Identity service running on port 3002","service":"post-service","timestamp":"2025-03-29T15:38:26.287Z"}
+{"level":"info","message":"Connected to mongoDB","service":"post-service","timestamp":"2025-03-29T15:38:26.906Z"}
+{"level":"info","message":"Received GET request to /api/posts/create-post","service":"post-service","timestamp":"2025-03-29T15:47:16.596Z"}
+{"level":"info","message":"Request body [object Object] ","service":"post-service","timestamp":"2025-03-29T15:47:16.600Z"}
+{"level":"info","message":"Received POST request to /api/posts/create-post","service":"post-service","timestamp":"2025-03-29T15:47:25.439Z"}
+{"level":"info","message":"Request body [object Object] ","service":"post-service","timestamp":"2025-03-29T15:47:25.442Z"}
+{"_message":"Post validation failed","errors":{"content":{"kind":"required","message":"Path `content` is required.","name":"ValidatorError","path":"content","properties":{"message":"Path `content` is required.","path":"content","type":"required"}}},"level":"error","message":"Error creating post Post validation failed: content: Path `content` is required.","service":"post-service","stack":"ValidationError: Post validation failed: content: Path `content` is required.\n    at Document.invalidate (E:\\Practice\\microservice-project\\post-service\\node_modules\\mongoose\\lib\\document.js:3329:32)\n    at E:\\Practice\\microservice-project\\post-service\\node_modules\\mongoose\\lib\\document.js:3090:17\n    at E:\\Practice\\microservice-project\\post-service\\node_modules\\mongoose\\lib\\schemaType.js:1407:9\n    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)","timestamp":"2025-03-29T15:47:25.508Z"}
+{"level":"info","message":"Identity service running on port 3002","service":"post-service","timestamp":"2025-03-29T17:36:05.112Z"}
+{"level":"info","message":"Connected to mongoDB","service":"post-service","timestamp":"2025-03-29T17:36:05.705Z"}
+{"level":"info","message":"Identity service running on port 3002","service":"post-service","timestamp":"2025-03-29T17:39:45.314Z"}
+{"level":"info","message":"Connected to mongoDB","service":"post-service","timestamp":"2025-03-29T17:39:45.963Z"}
+{"level":"info","message":"Identity service running on port 3002","service":"post-service","timestamp":"2025-03-29T17:41:48.061Z"}
+{"level":"info","message":"Connected to mongoDB","service":"post-service","timestamp":"2025-03-29T17:41:48.750Z"}
+{"level":"info","message":"Identity service running on port 3002","service":"post-service","timestamp":"2025-03-29T17:41:51.533Z"}
+{"level":"info","message":"Connected to mongoDB","service":"post-service","timestamp":"2025-03-29T17:41:52.062Z"}
+{"level":"info","message":"Identity service running on port 3002","service":"post-service","timestamp":"2025-03-29T17:41:53.547Z"}
+{"level":"info","message":"Connected to mongoDB","service":"post-service","timestamp":"2025-03-29T17:41:55.122Z"}
+{"level":"info","message":"Identity service running on port 3002","service":"post-service","timestamp":"2025-03-29T17:42:02.171Z"}
+{"level":"info","message":"Connected to mongoDB","service":"post-service","timestamp":"2025-03-29T17:42:02.662Z"}
+{"level":"info","message":"Identity service running on port 3002","service":"post-service","timestamp":"2025-03-29T17:42:08.987Z"}
+{"level":"info","message":"Connected to mongoDB","service":"post-service","timestamp":"2025-03-29T17:42:09.553Z"}
+{"level":"info","message":"Identity service running on port 3002","service":"post-service","timestamp":"2025-03-29T17:42:20.828Z"}
+{"level":"info","message":"Connected to mongoDB","service":"post-service","timestamp":"2025-03-29T17:42:22.945Z"}
+{"level":"info","message":"Identity service running on port 3002","service":"post-service","timestamp":"2025-03-29T17:42:46.826Z"}
+{"level":"info","message":"Connected to mongoDB","service":"post-service","timestamp":"2025-03-29T17:42:47.520Z"}
+{"level":"info","message":"Identity service running on port 3002","service":"post-service","timestamp":"2025-03-29T17:42:53.278Z"}
+{"level":"info","message":"Connected to mongoDB","service":"post-service","timestamp":"2025-03-29T17:42:54.302Z"}
+{"level":"info","message":"Identity service running on port 3002","service":"post-service","timestamp":"2025-03-29T17:42:59.349Z"}
+{"level":"info","message":"Connected to mongoDB","service":"post-service","timestamp":"2025-03-29T17:42:59.861Z"}
+{"level":"info","message":"Identity service running on port 3002","service":"post-service","timestamp":"2025-03-29T17:43:01.283Z"}
+{"level":"info","message":"Connected to mongoDB","service":"post-service","timestamp":"2025-03-29T17:43:01.810Z"}
+{"level":"info","message":"Identity service running on port 3002","service":"post-service","timestamp":"2025-03-29T17:47:17.242Z"}
+{"level":"info","message":"Connected to mongoDB","service":"post-service","timestamp":"2025-03-29T17:47:17.833Z"}
+{"level":"info","message":"Identity service running on port 3002","service":"post-service","timestamp":"2025-03-29T17:47:23.536Z"}
+{"level":"info","message":"Connected to mongoDB","service":"post-service","timestamp":"2025-03-29T17:47:24.055Z"}
+{"level":"info","message":"Identity service running on port 3002","service":"post-service","timestamp":"2025-03-29T17:47:26.865Z"}
+{"level":"info","message":"Connected to mongoDB","service":"post-service","timestamp":"2025-03-29T17:47:27.434Z"}
+{"level":"info","message":"Identity service running on port 3002","service":"post-service","timestamp":"2025-03-29T17:47:47.555Z"}
+{"level":"info","message":"Connected to mongoDB","service":"post-service","timestamp":"2025-03-29T17:47:48.053Z"}
+{"level":"info","message":"Identity service running on port 3002","service":"post-service","timestamp":"2025-03-29T17:47:51.692Z"}
+{"level":"info","message":"Connected to mongoDB","service":"post-service","timestamp":"2025-03-29T17:47:52.171Z"}
+{"level":"info","message":"Identity service running on port 3002","service":"post-service","timestamp":"2025-03-29T17:47:53.408Z"}
+{"level":"info","message":"Identity service running on port 3002","service":"post-service","timestamp":"2025-03-29T17:47:54.768Z"}
+{"level":"info","message":"Identity service running on port 3002","service":"post-service","timestamp":"2025-03-29T17:47:57.146Z"}
+{"level":"info","message":"Connected to mongoDB","service":"post-service","timestamp":"2025-03-29T17:47:58.696Z"}
+{"level":"info","message":"Identity service running on port 3002","service":"post-service","timestamp":"2025-03-29T17:48:03.505Z"}
+{"level":"info","message":"Connected to mongoDB","service":"post-service","timestamp":"2025-03-29T17:48:03.948Z"}
+{"level":"info","message":"Received POST request to /api/posts/create-post","service":"post-service","timestamp":"2025-03-29T17:49:22.047Z"}
+{"level":"info","message":"Request body [object Object] ","service":"post-service","timestamp":"2025-03-29T17:49:22.049Z"}
+{"level":"info","message":"Create Post endpoint hit","service":"post-service","timestamp":"2025-03-29T17:49:22.051Z"}
+{"0":"\"","1":"c","10":"i","11":"s","12":" ","13":"r","14":"e","15":"q","16":"u","17":"i","18":"r","19":"e","2":"o","20":"d","3":"n","4":"t","5":"e","6":"n","7":"t","8":"\"","9":" ","level":"warn","message":"Validation error","service":"post-service","timestamp":"2025-03-29T17:49:22.065Z"}
+{"level":"info","message":"Received POST request to /api/posts/create-post","service":"post-service","timestamp":"2025-03-29T17:50:29.116Z"}
+{"level":"info","message":"Request body [object Object] ","service":"post-service","timestamp":"2025-03-29T17:50:29.119Z"}
+{"level":"info","message":"Create Post endpoint hit","service":"post-service","timestamp":"2025-03-29T17:50:29.123Z"}
+{"$__":{"$versionError":null,"activePaths":{"paths":{"content":"require","user":"require"},"states":{"default":{},"modify":{},"require":{"content":true,"user":true}}},"backup":{"activePaths":{"default":{"_id":true,"createdAt":true},"modify":{"content":true,"mediaIds":true,"updatedAt":true,"user":true}},"validationError":null},"cachedRequired":{},"inserting":true,"op":null,"pathsToScopes":{"mediaIds":{"__v":0,"_id":"67e832e5c809f2e01b98463e","content":"New post created","createdAt":"2025-03-29T17:50:29.174Z","mediaIds":[],"updatedAt":"2025-03-29T17:50:29.174Z","user":"67d6da1f68240c6705b35097"}},"saveOptions":null,"savedState":{},"saving":null,"validating":null},"$isNew":false,"_doc":{"__v":0,"_id":"67e832e5c809f2e01b98463e","content":"New post created","createdAt":"2025-03-29T17:50:29.174Z","mediaIds":[],"updatedAt":"2025-03-29T17:50:29.174Z","user":"67d6da1f68240c6705b35097"},"level":"info","message":"Post created successfully","service":"post-service","timestamp":"2025-03-29T17:50:29.300Z"}
