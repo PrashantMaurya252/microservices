@@ -94,6 +94,9 @@ app.use('/v1/posts',validateToken,proxy(process.env.POST_SERVICE_URL,{
   },
 }))
 
+// setting a proxy for media service
+app.use('/')
+
 app.use(errorHandler)
 
 app.listen(PORT,()=>{
