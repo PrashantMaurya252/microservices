@@ -8,6 +8,7 @@ const postRoutes = require('./routes/post-routes')
 const errorHandler = require('./middlewares/errorHandler')
 const logger = require('./utils/logger')
 const connectDB = require('./utils/connectToDB')
+const { connectRabbitMQ } = require('./utils/rabbitmq')
 
 const app = express()
 const PORT = process.env.PORT || 3002
@@ -35,9 +36,20 @@ app.use('/api/posts',(req,res,next)=>{
     next()
 },postRoutes)
 
-app.listen(PORT,()=>{
-    logger.info(`Identity service running on port ${PORT}`)
- });
+async function startServer(){
+    try {
+        await connectRabbitMQ()
+        app.listen(PORT,()=>{
+            logger.info(`Identity service running on port ${PORT}`)
+         });
+    } catch (error) {
+        logger.error('Failed to connect to server',error)
+        process.exit(1)
+    }
+}
+
+startServer()
+
 
  // unhandler promise rejection
 
