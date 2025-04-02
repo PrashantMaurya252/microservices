@@ -40,7 +40,7 @@ async function startServer(){
     try {
         await connectRabbitMQ()
         app.listen(PORT,()=>{
-            logger.info(`Identity service running on port ${PORT}`)
+            logger.info(`Media service running on port ${PORT}`)
          });
     } catch (error) {
         logger.error('Failed to connect to server',error)

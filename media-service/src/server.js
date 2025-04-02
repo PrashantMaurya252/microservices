@@ -8,6 +8,7 @@ const errorHandler = require('./middlewares/errorHandler')
 const logger = require('./utils/logger')
 const mediaRoutes = require('./routes/media-routes')
 const connectDB = require('./utils/connectToDB')
+const { connectRabbitMQ } = require('./utils/rabbitmq')
 
 const app = express()
 const PORT =process.env.PORT || 3003
@@ -29,9 +30,22 @@ app.use((req,res,next)=>{
 app.use('/api/media',mediaRoutes)
 app.use(errorHandler)
 
-app.listen(PORT,()=>{
-    logger.info(`media service running on PORT ${PORT}`)
-})
+async function startServer(){
+    try {
+        await connectRabbitMQ()
+        app.listen(PORT,()=>{
+            logger.info(`Media service running on port ${PORT}`)
+         });
+    } catch (error) {
+        logger.error('Failed to connect to server',error)
+        process.exit(1)
+    }
+}
+
+// app.listen(PORT,()=>{
+//     logger.info(`media service running on PORT ${PORT}`)
+// })
+startServer()
 
 process.on("unhandledRejection",(reason,promise)=>{
     logger.error("Unhandled Rejection at",promise,"reson:",reason)
