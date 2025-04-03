@@ -1,15 +1,15 @@
 const amqp = require('amqplib');
 const logger = require('./logger')
 
-const connection = null;
-const channel = null;
+let connection = null;
+let channel = null;
 
 const EXCHANGE_NAME = 'facebook_events'
 
 async function connectRabbitMQ(){
     try {
-        const connection = await amqp.connect(process.env.RABBITMQ_URL);
-        const channel = await connection.createChannel();
+         connection = await amqp.connect(process.env.RABBITMQ_URL);
+         channel = await connection.createChannel();
 
         await channel.assertExchange(EXCHANGE_NAME,"topic",{durable:false});
         logger.info("Connected to rabbitmq");

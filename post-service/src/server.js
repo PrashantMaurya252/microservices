@@ -39,6 +39,9 @@ app.use('/api/posts',(req,res,next)=>{
 async function startServer(){
     try {
         await connectRabbitMQ()
+
+        // consume all the event
+        
         app.listen(PORT,()=>{
             logger.info(`Media service running on port ${PORT}`)
          });

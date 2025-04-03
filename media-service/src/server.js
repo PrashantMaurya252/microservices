@@ -8,7 +8,8 @@ const errorHandler = require('./middlewares/errorHandler')
 const logger = require('./utils/logger')
 const mediaRoutes = require('./routes/media-routes')
 const connectDB = require('./utils/connectToDB')
-const { connectRabbitMQ } = require('./utils/rabbitmq')
+const { connectRabbitMQ, consumeEvent } = require('./utils/rabbitmq')
+const { handlePostDeleted } = require('./eventHandlers/media-event-handlers')
 
 const app = express()
 const PORT =process.env.PORT || 3003
@@ -33,6 +34,11 @@ app.use(errorHandler)
 async function startServer(){
     try {
         await connectRabbitMQ()
+        logger.info("connected to rabbit mq")
+
+        // consume all-event
+
+        await consumeEvent('post.deleted',handlePostDeleted)
         app.listen(PORT,()=>{
             logger.info(`Media service running on port ${PORT}`)
          });
