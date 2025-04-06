@@ -27,15 +27,22 @@ const createPost = async (req, res) => {
       });
     }
     const { content, mediaIds } = req.body;
-    const newelyCretedPost = new Post({
+    const newlyCreatedPost = new Post({
       user: req.user.userId,
       content,
       mediaIds: mediaIds || [],
     });
 
-    await newelyCretedPost.save();
-    await invalidatePostCache(req, newelyCretedPost._id.toString());
-    logger.info("Post created successfully", newelyCretedPost);
+    await newlyCreatedPost.save();
+
+    await publishEvent("post.created",{
+      postId:newlyCreatedPost._id.toString(),
+      userId:newlyCreatedPost.user.toString(),
+      content:newlyCreatedPost.content,
+      createdAt:newlyCreatedPost.createdAt
+    })
+    await invalidatePostCache(req, newlyCreatedPost._id.toString());
+    logger.info("Post created successfully", newlyCreatedPost);
     res.status(201).json({
       success: true,
       message: "Post created successfully",

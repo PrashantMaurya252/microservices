@@ -11,6 +11,7 @@ const searchRoutes = require('./routes/searchRoutes')
 
 const {connectRabbitMQ,consumeEvent} = require('./utils/rabbitmq')
 const connectDB = require('./utils/connectToDB')
+const { handlePostCreated, handlePostDeleted } = require('./eventHandlers/search-event-handlers')
 
 const app = express()
 const PORT = process.env.PORT || 3004
@@ -28,3 +29,20 @@ app.use((req,res,next)=>{
 })
 
 app.use('/api/search',searchRoutes)
+
+app.use(errorHandler)
+async function startServer(){
+    try {
+        await connectRabbitMQ();
+        await consumeEvent('post.created',handlePostCreated)
+        await consumeEvent('post.deleted',handlePostDeleted)
+        app.listen(PORT,()=>{
+            logger.info(`Search service is running on PORT ${PORT}`)
+        })
+    } catch (error) {
+        logger.error(error,"Failed to start search service")
+        process.exit(1)
+    }
+}
+
+startServer()

@@ -39,3 +39,17 @@
 {"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-04-05T12:36:15.013Z"}
 {"level":"info","message":"Identity service running on port 3001","service":"identity-service","timestamp":"2025-04-05T13:44:07.804Z"}
 {"level":"info","message":"Connected to mongoDB","service":"identity-service","timestamp":"2025-04-05T13:44:08.288Z"}
+{"level":"info","message":"Identity service running on port 3001","service":"identity-service","timestamp":"2025-04-06T05:10:27.871Z"}
+{"level":"info","message":"Connected to mongoDB","service":"identity-service","timestamp":"2025-04-06T05:10:28.444Z"}
+{"level":"info","message":"Received POST request to /api/auth/login","service":"identity-service","timestamp":"2025-04-06T05:56:13.805Z"}
+{"level":"info","message":"Request body [object Object] ","service":"identity-service","timestamp":"2025-04-06T05:56:13.806Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-04-06T05:56:13.815Z"}
+{"level":"info","message":"Received POST request to /api/auth/login","service":"identity-service","timestamp":"2025-04-06T06:17:44.273Z"}
+{"level":"info","message":"Request body [object Object] ","service":"identity-service","timestamp":"2025-04-06T06:17:44.277Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-04-06T06:17:44.284Z"}
+{"level":"info","message":"Received POST request to /api/auth/login","service":"identity-service","timestamp":"2025-04-06T06:25:35.118Z"}
+{"level":"info","message":"Request body [object Object] ","service":"identity-service","timestamp":"2025-04-06T06:25:35.120Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-04-06T06:25:35.125Z"}
+{"level":"info","message":"Received POST request to /api/auth/login","service":"identity-service","timestamp":"2025-04-06T06:25:44.748Z"}
+{"level":"info","message":"Request body [object Object] ","service":"identity-service","timestamp":"2025-04-06T06:25:44.749Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-04-06T06:25:44.755Z"}
